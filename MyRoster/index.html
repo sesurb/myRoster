@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="myRoster" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="styles/app.css" rel="stylesheet" />
+
+</head>
+<body data-ng-controller="rosterController">
+    <div class="panel panel-default roster">
+        <div class="panel-heading">My NFL Roster</div>
+        <div class="panel-body">
+            <div class="player-card" data-ng-repeat="player in players">
+                <div class="player-name">{{player.name}} </div>
+                <div class="player-number">{{player.number}} - {{player.position}}</div>
+                <div class="player-image">
+                    <img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/" /></div>
+            </div>           
+        </div>
+    </div>
+    <form>
+        <div class="panel panel-primary pnl-player-add">
+            <div class="panel-heading">Add Player</div>
+            <div class="panel-body">
+                <input type="text" placeholder="Player Name" class="form-field" ng-model="newplayer.name" />
+                <input type="text" placeholder="Player Number" class="form-field" ng-model="newplayer.number" />
+                <input type="text" placeholder="Player Position" class="form-field" ng-model="newplayer.position" />
+                <button type="submit" class="btn-primary" data-ng-click="addPlayer()">Add Player</button>
+            </div>
+        </div>
+    </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/controller/rosterController.js"></script>
+    <script src="app/services/data.services.js"></script>
+</body>
+</html>

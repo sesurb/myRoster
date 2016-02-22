@@ -1,0 +1,23 @@
+﻿body {
+}
+
+.player-card {
+display:inline-block;
+border: 1px solid black;
+}
+
+.form-field {
+    width:400px;
+    display:block;
+    margin:5px;
+}
+
+.pnl-player-add {
+    width:450px;
+    margin:15px;
+}
+
+.pnl-player-add button{
+    margin-left:5px;
+    font-weight:bold;
+}
